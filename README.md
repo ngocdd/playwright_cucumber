@@ -3,10 +3,17 @@
 #### install playwight/cucumber/typescript/ts-node
 Create a new, empty folder and run npm init to start a new npm project. Or use the -y option (shorthand for --yes) to skip the questions and just use the default config: npm init -y. This will create a package.json file.
 
-Next up, install our dependencies from npm:
+Next up, install our dependencies from yarn:
 ```
-npm i playwright @cucumber/cucumber typescript ts-node @types/node -D
+yarn create playwright
 
+yarn add @cucumber/cucumber
+
+yarn add typescript
+
+yarn add ts-node
+
+yarn add @types/node
 ```
 Note the -D is short hand for --save-dev. We don't need separate @types dependencies for Cucumber and Playwright as they both come bundled with TypeScript definitions.
 

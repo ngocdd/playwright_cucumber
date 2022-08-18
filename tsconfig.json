@@ -1,0 +1,10 @@
+{
+    "ts-node": {"transpileOnly": true},
+    "compilerOptions": {
+        "strict": true,
+        "target": "ES6",
+        "module": "commonjs",
+        "outDir": "js",
+        "forceConsistentCasingInFileNames": false,
+    }
+}
