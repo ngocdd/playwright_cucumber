@@ -7,11 +7,15 @@ Next up, install our dependencies from yarn:
 ```
 yarn create playwright
 ```
+```
 yarn add @cucumber/cucumber
+```
 ```
 yarn add typescript
 ```
+```
 yarn add ts-node
+```
 ```
 yarn add @types/node
 ```
