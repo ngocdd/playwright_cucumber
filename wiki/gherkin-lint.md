@@ -1,4 +1,4 @@
-# Gherkin lints
+# Gherkin lint
 
 Uses Gherkin to parse feature files and runs linting against the default rules, and the optional rules you specified in your .gherkin-lintrc file
 

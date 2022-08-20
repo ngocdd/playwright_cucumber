@@ -1,0 +1,12 @@
+name: Gherkin Lint Check
+
+on: [push]
+
+jobs:
+  Gherkin-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: restqa/gherkin-linter-action@0.0.1
+        with:
+          config_file: '.gherkin-lintrc'
