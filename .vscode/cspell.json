@@ -1,0 +1,26 @@
+{
+    "version": "0.2",
+    "dictionaryDefinitions": [
+        {
+            "name": "spellingAllows",
+            "path": "../.github/actions/spelling/allow.txt"
+        },
+        {
+            "name": "spellingExpect",
+            "path": "../.github/actions/spelling/expect.txt"
+        }
+    ],
+    "dictionaries": [
+        "spellingAllows",
+        "spellingExpect"
+    ],
+    "words": [
+        "eibanam",
+        "Millis",
+        "minio",
+        "Minio",
+        "Repo's",
+        "trivago",
+        "unarchives"
+    ]
+}
