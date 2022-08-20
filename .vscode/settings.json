@@ -1,8 +1,5 @@
 {
-    "cucumberautocomplete.steps": [
-        "step-definitions/*.ts",
-        "step-definitions/**/*.ts"
-    ],
+    "cucumberautocomplete.steps": ["step-definitions/*.ts", "step-definitions/**/*.ts"],
     "cucumberautocomplete.syncfeatures": "features/**/*.feature",
     "cucumberautocomplete.strictGherkinCompletion": true,
     "cucumberautocomplete.strictGherkinValidation": true,
@@ -15,15 +12,12 @@
         "strings": true,
         "other": true
     },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.rulers": [80, 120],
     "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then|And)\\(",
     // "cucumberautocomplete.stepRegExSymbol": "'", //when enable it, we canot use symbol `
-    "cSpell.enableFiletypes": [
-        "feature",
-        "ts",
-        "js"
-    ],
+    "cSpell.enableFiletypes": ["feature", "ts", "js"],
     "todohighlight.isEnable": true,
     "todohighlight.isCaseSensitive": true,
     "todohighlight.keywords": [
@@ -45,15 +39,15 @@
         },
         {
             "text": "@syllabus",
-            "backgroundColor": "#007bff",
+            "backgroundColor": "#007bff"
         },
         {
             "text": "@communication",
-            "backgroundColor": "#e83e8c",
+            "backgroundColor": "#e83e8c"
         },
         {
             "text": "FIXME:",
-            "backgroundColor": "#28a745",
+            "backgroundColor": "#28a745"
         },
         {
             "text": "TODO:",
@@ -68,16 +62,12 @@
         "cursor": "pointer",
         "border": "none",
         "borderRadius": "2px",
-        "isWholeLine": false,
-        //other styling properties goes here ... 
+        "isWholeLine": false
+        //other styling properties goes here ...
     },
-    "todohighlight.include": [
-        "**/*.js",
-        "**/*.ts",
-        "**/*.feature",
-    ],
-    "todohighlight.exclude": [
-        "**/node_modules/**",
-        "./packages/**",
-    ]
+    "todohighlight.include": ["**/*.js", "**/*.ts", "**/*.feature"],
+    "todohighlight.exclude": ["**/node_modules/**", "./packages/**"],
+    "[cucumber]": {
+        "editor.defaultFormatter": "CucumberOpen.cucumber-official"
+    }
 }
