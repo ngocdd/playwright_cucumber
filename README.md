@@ -6,13 +6,13 @@ Create a new, empty folder and run npm init to start a new npm project. Or use t
 Next up, install our dependencies from yarn:
 ```
 yarn create playwright
-
+```
 yarn add @cucumber/cucumber
-
+```
 yarn add typescript
-
+```
 yarn add ts-node
-
+```
 yarn add @types/node
 ```
 Note the -D is short hand for --save-dev. We don't need separate @types dependencies for Cucumber and Playwright as they both come bundled with TypeScript definitions.
