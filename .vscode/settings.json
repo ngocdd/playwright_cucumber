@@ -1,0 +1,83 @@
+{
+    "cucumberautocomplete.steps": [
+        "step-definitions/*.ts",
+        "step-definitions/**/*.ts"
+    ],
+    "cucumberautocomplete.syncfeatures": "features/**/*.feature",
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.strictGherkinValidation": true,
+    "cucumberautocomplete.smartSnippets": true,
+    "cucumberautocomplete.stepsInvariants": true,
+    "cucumberautocomplete.skipDocStringsFormat": true,
+    "cucumberautocomplete.onTypeFormat": true,
+    "editor.quickSuggestions": {
+        "comments": false,
+        "strings": true,
+        "other": true
+    },
+    "editor.formatOnSave": true,
+    "editor.rulers": [80, 120],
+    "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then|And)\\(",
+    // "cucumberautocomplete.stepRegExSymbol": "'", //when enable it, we canot use symbol `
+    "cSpell.enableFiletypes": [
+        "feature",
+        "ts",
+        "js"
+    ],
+    "todohighlight.isEnable": true,
+    "todohighlight.isCaseSensitive": true,
+    "todohighlight.keywords": [
+        {
+            "text": "@user",
+            "backgroundColor": "#17a2b8"
+        },
+        {
+            "text": "@live-lesson",
+            "backgroundColor": "#6610f2"
+        },
+        {
+            "text": "@entry-exit",
+            "backgroundColor": "#3f84e5"
+        },
+        {
+            "text": "@lesson",
+            "backgroundColor": "#6610f2"
+        },
+        {
+            "text": "@syllabus",
+            "backgroundColor": "#007bff",
+        },
+        {
+            "text": "@communication",
+            "backgroundColor": "#e83e8c",
+        },
+        {
+            "text": "FIXME:",
+            "backgroundColor": "#28a745",
+        },
+        {
+            "text": "TODO:",
+            "backgroundColor": "#ffc107"
+        }
+    ],
+    "todohighlight.defaultStyle": {
+        "color": "white",
+        "padding": "2px",
+        "backgroundColor": "#ffab00",
+        "overviewRulerColor": "#ffab00",
+        "cursor": "pointer",
+        "border": "none",
+        "borderRadius": "2px",
+        "isWholeLine": false,
+        //other styling properties goes here ... 
+    },
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.ts",
+        "**/*.feature",
+    ],
+    "todohighlight.exclude": [
+        "**/node_modules/**",
+        "./packages/**",
+    ]
+}
