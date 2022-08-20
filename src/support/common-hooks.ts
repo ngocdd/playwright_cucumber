@@ -13,12 +13,12 @@ import {
 } from '@playwright/test';
 
 
-let browser: ChromiumBrowser | FirefoxBrowser | WebKitBrowser;
+var browser: ChromiumBrowser | FirefoxBrowser | WebKitBrowser;
 
 
 BeforeAll(async function () {
   // Browsers are expensive in Playwright so only create 1
-  browser = await chromium.launch({
+  global.browser = await chromium.launch({
     // Not headless so we can watch test runs
     headless: false,
     // Slow so we can see things happening
@@ -27,12 +27,12 @@ BeforeAll(async function () {
 });
 
 AfterAll(async function () {
-  await browser.close();
+  await global.browser.close();
 });
 
 // Create a new test context and page per scenario
 Before(async function (this: OurWorld) {
-  this.context = await browser.newContext({
+  this.context = await global.browser.newContext({
     viewport: { width: 1200, height: 800 },
   });
   this.page = await this.context.newPage();

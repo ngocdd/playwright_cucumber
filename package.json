@@ -6,10 +6,11 @@
   "author": "Oliver-Dang Dinh Ngoc <dinhngoc.dang@manabie.com>",
   "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.25.0"
+    "@playwright/test": "^1.25.0",
+    "prettier": "2.7.1"
   },
   "scripts": {
-    "test": "cucumber-js --publish"
+    "test": "cucumber-js"
   },
   "dependencies": {
     "@cucumber/cucumber": "^8.5.1",
