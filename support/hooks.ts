@@ -1,6 +1,6 @@
 // test.setup.ts
-import { Before, BeforeAll, AfterAll, After } from "@cucumber/cucumber";
-import { OurWorld } from "../support/cucumber-world";
+import { Before, BeforeAll, AfterAll, After } from '@cucumber/cucumber';
+import { OurWorld } from './world';
 import {
   chromium,
   ChromiumBrowser,
@@ -12,9 +12,7 @@ import {
   request,
 } from '@playwright/test';
 
-
 var browser: ChromiumBrowser | FirefoxBrowser | WebKitBrowser;
-
 
 BeforeAll(async function () {
   // Browsers are expensive in Playwright so only create 1

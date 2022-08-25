@@ -1,8 +1,6 @@
 {
-    "cucumberautocomplete.steps": [
-        "step-definitions/*.ts",
-        "step-definitions/**/*.ts"
-    ],
+
+    "cucumberautocomplete.steps": ["step-definitions/*.ts", "step-definitions/**/*.ts"],
     "cucumberautocomplete.syncfeatures": "features/**/*.feature",
     "cucumberautocomplete.strictGherkinCompletion": true,
     "cucumberautocomplete.strictGherkinValidation": true,
@@ -15,6 +13,7 @@
         "strings": true,
         "other": true
     },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.rulers": [80, 120],
     "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then|And)\\(",
@@ -24,6 +23,7 @@
         "ts",
         "js"
     ],
+    "cSpell.enableFiletypes": ["feature", "ts", "js"],
     "todohighlight.isEnable": true,
     "todohighlight.isCaseSensitive": true,
     "todohighlight.keywords": [
@@ -54,6 +54,15 @@
         {
             "text": "FIXME:",
             "backgroundColor": "#28a745",
+            "backgroundColor": "#007bff"
+        },
+        {
+            "text": "@communication",
+            "backgroundColor": "#e83e8c"
+        },
+        {
+            "text": "FIXME:",
+            "backgroundColor": "#28a745"
         },
         {
             "text": "TODO:",
@@ -80,4 +89,13 @@
         "**/node_modules/**",
         "./packages/**",
     ]
+}
+        "isWholeLine": false
+        //other styling properties goes here ...
+    },
+    "todohighlight.include": ["**/*.js", "**/*.ts", "**/*.feature"],
+    "todohighlight.exclude": ["**/node_modules/**", "./packages/**"],
+    "[cucumber]": {
+        "editor.defaultFormatter": "CucumberOpen.cucumber-official"
+    }
 }
