@@ -32,9 +32,9 @@ The generated tsconfig.json contains all the possible config options, with most 
 Disable type checking and just do transpilation for ts-node. We can use a separate task just for type checking, so the transiplation is quicker when we're running the tests. Add the following to the tsconfig.json:
 ```json
 {
-+  "ts-node": {
-+    "transpileOnly": true
-+  },
+  "ts-node": {
+    "transpileOnly": true
+  },
   "compilerOptions": {
   }
 ```
@@ -50,9 +50,9 @@ run feature files from a features directory.
 Add the following command to your package.json. This will allow us to run npm test on the command line:
 ```json
 {
-+  "scripts": {
-+    "test": "cucumber-js features/**/*.feature --require-module ts-node/register --require test.setup.ts --require step-definitions/**/*.ts"
-+  }
+  "scripts": {
+    "test": "cucumber-js features/**/*.feature --require-module ts-node/register --require test.setup.ts --require step-definitions/**/*.ts"
+  }
 }
 ```
 Before we can run the command, we need to add the test setup file, step definitions and feature files. Let's start with the test setup.
