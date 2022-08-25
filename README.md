@@ -36,7 +36,7 @@ Disable type checking and just do transpilation for ts-node. We can use a separa
     "transpileOnly": true
   },
   "compilerOptions": {
-  }
+}
 ```
 Now that we have TypeScript configured, we need to set up Cucumber.js.
 
