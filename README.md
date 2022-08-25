@@ -30,11 +30,11 @@ Run npx -p typescript tsc --init on the command line to generate a tsconfig.json
 The generated tsconfig.json contains all the possible config options, with most of them commented out. It also contains a simple explanation of each one. So it's a good way to set up get started with TypeScript config.
 
 Disable type checking and just do transpilation for ts-node. We can use a separate task just for type checking, so the transiplation is quicker when we're running the tests. Add the following to the tsconfig.json:
-```
+```json
 {
-+  "ts-node": {
-+    "transpileOnly": true
-+  },
+  "ts-node": {
+    "transpileOnly": true
+  },
   "compilerOptions": {
   }
 ```
@@ -48,11 +48,11 @@ load a setup file (test.setup.ts) to configure Playwright
 load step definitions from a step-definitions directory
 run feature files from a features directory.
 Add the following command to your package.json. This will allow us to run npm test on the command line:
-```
+```json
 {
-+  "scripts": {
-+    "test": "cucumber-js features/**/*.feature --require-module ts-node/register --require test.setup.ts --require step-definitions/**/*.ts"
-+  }
+  "scripts": {
+    "test": "cucumber-js features/**/*.feature --require-module ts-node/register --require test.setup.ts --require step-definitions/**/*.ts"
+  }
 }
 ```
 Before we can run the command, we need to add the test setup file, step definitions and feature files. Let's start with the test setup.
@@ -65,7 +65,7 @@ an isolated context for each scenario, exposed to the hooks and steps as this.
 In our case, the initialisation is the Playwright instances - the browser, context and page, the core concepts of Playwright. Browser instances in Playwright are expensive so we'll only create an instance once for all tests. We'll use a BeforeAll for this and an AfterAll to destory it. Contexts and pages in Playwright are cheap so we'll use a new one per test with a Before (and After) hook. We'll store the context and page on the World instance so they're available in each step definition as this.page and this.context.
 
 But first, we need to create a TypeScript type that represents our World instance. We'll extend the built in World type from Cucumber. Create a types.ts file with the following:
-```
+```ts
 import { World as CucumberWorld } from "@cucumber/cucumber";
 import { BrowserContext, Page } from "playwright";
 export interface OurWorld extends CucumberWorld {
@@ -74,7 +74,7 @@ export interface OurWorld extends CucumberWorld {
 }
 ```
 Next, we need to setup Playwright. Create a test.setup.ts with the following. It's got comments throughout which should explain what it's doing:
-```
+```ts
 // test.setup.ts
 import { Before, BeforeAll, AfterAll, After } from "@cucumber/cucumber";
 import { devices, chromium } from "playwright";
@@ -116,7 +116,7 @@ A step definition is a an expression in combination with a JavaScript (or in our
 Create a step-definitions folder, and a file called homepage.ts. This file can actually be called anything with a ts extension: our Cucumber command uses a glob to load all step definitions: --require step-definitions/**/*.ts.
 
 We'll write a simple use case of 3 step definitions with given, when, then. We'll use a cucumber expression, a regular expression and a string to show the different types. Again the following is commented to explain what's going on.
-```
+```ts
 // step-definitions/homepage.ts
 import { Given, When, Then } from "@cucumber/cucumber";
 import assert from "assert";
@@ -155,7 +155,7 @@ Now we have our step definitions, we can now combine them into a feature file to
 Our feature file will use the step definitions we've just created. We'll run a test against the gov.uk homepage, to assert that you can click the link in the footer to the accessibiltiy statement.
 
 Create a file called homepage.feature in the features directory, and paste the following:
-```
+```gherkin
 Feature: Random
   A random feature using some Playwright stuff
 Scenario: Govuk accessibility statement link
