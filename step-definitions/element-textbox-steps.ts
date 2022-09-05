@@ -1,7 +1,6 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { OurWorld } from '../support/world';
-import {}
 
 Given('go to demo site', function () {
   // Write code here that turns the phrase above into concrete actions
