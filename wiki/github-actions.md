@@ -2,6 +2,8 @@
 
 ## Folders
 
-### github actions ./github-actions.md
+### github actions
+
+./github-actions.md
 
 path: .github/workflows
