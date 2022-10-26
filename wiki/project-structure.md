@@ -4,22 +4,14 @@
 root
 │   README.md
 │   file001.txt
-│
 └───feature
-│   │
 │   └───pages
-│       │   ...feature
-│       │   ...
-│
 └───step-definition
 |    └───selectors
 |    └──-definition
 |    └──-steps
-|
-|
 └───support
 |   └───type
-|
 └───wiki
 ```
 
