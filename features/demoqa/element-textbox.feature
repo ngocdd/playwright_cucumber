@@ -1,7 +1,7 @@
 Feature: test textbox in demoqa site
 
   Background: 
-    Given Go to demoqa site
+    Given Go to Demoqa Site
     And Go to element page
     And Go to textbox page
 
