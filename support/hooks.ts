@@ -1,4 +1,3 @@
-// test.setup.ts
 import { Before, BeforeAll, AfterAll, After } from '@cucumber/cucumber';
 import { OurWorld } from './world';
 import {
@@ -14,9 +13,9 @@ import {
 
 var browser: ChromiumBrowser | FirefoxBrowser | WebKitBrowser;
 
-BeforeAll(async function () {
+BeforeAll(function () {
   // Browsers are expensive in Playwright so only create 1
-  global.browser = await chromium.launch({
+  global.browser = chromium.launch({
     // Not headless so we can watch test runs
     headless: false,
     // Slow so we can see things happening
@@ -30,7 +29,7 @@ AfterAll(async function () {
 
 // Create a new test context and page per scenario
 Before(async function (this: OurWorld) {
-  this.context = await global.browser.newContext({
+  this.context = global.browser.newContext({
     viewport: { width: 1200, height: 800 },
   });
   this.page = await this.context.newPage();
