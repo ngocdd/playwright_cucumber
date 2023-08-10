@@ -8,7 +8,7 @@ Given('go to CMD page', async function (driver: OurWorld) {
   console.log('haha');
   await page.goto('https://administration.manabie.net/');
   await page.fill(orgID, 'synersia');
-  await page.fill(userName, 'phuc.chau+e2etokyoschooladmin@manabie.com');
-  await page.fill(passWord, 'Manabie123');
+  await page.fill(userName, ');
+  await page.fill(passWord, '');
   await page.click(submitButton);
 });
